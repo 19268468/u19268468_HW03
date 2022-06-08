@@ -6,22 +6,13 @@ using System.Web.Mvc;
 
 namespace u19268468_HW03.Controllers
 {
-    public class HomeController : Controller
+    public class FileController : Controller
     {
+        // GET: File
         [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
-
-        [HttpGet]
-        public ActionResult About()
-        {
-            ViewBag.Message = "About Program";
-
-            return View();
-        }
-
-       
     }
 }
