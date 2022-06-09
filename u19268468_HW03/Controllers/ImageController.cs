@@ -12,6 +12,8 @@ namespace u19268468_HW03.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            ViewBag.Title = "Image";
+
             return View();
         }
     }

@@ -2,30 +2,41 @@
     ViewBag.Title = "Home Page";
 }
 
+<h2>Media Upload</h2>
+<h4>The platform you didn't think you needed to store your files</h4>
+<br>
+<br>
+
 <div class="jumbotron">
     <div class="row">
         <div class="col-md-4">
             <h2>Description</h2>
-            <p>
-                This program allows you to upload images and videos from your desktop. 
-            </p>
+            <h5>
+                This program allows you to upload documents, images and videos from your desktop. <br><br>
+                The form on the right allows you to select the type of file you would like to upload. <br><br>
+                You simply select the file type, e.g. document, then press the choose file button to select the document from your PC. <br><br>
+                There after, you press the submit button to upload the selected file onto the system . <br><br><br>
+
+                <i><b>HAVE FUN!!! </b></i> <br>
+                <i><b>:D </b></i>
+            </h5>
 
         </div>
         <div class="col-md-4">
             <h2>Options to select</h2> @*form*@
 
-        <form action="/action_page.php">
-            <p>Please select your favorite Web language:</p>
-            <input type="radio" id="document" name="upload_type" value="Document">
-            <label for="document">Document</label><br>
-            <input type="radio" id="image" name="upload_type" value="Image">
-            <label for="image">Image</label><br>
-            <input type="radio" id="javascript" name="upload_type" value="Video">
-            <label for="video">Video</label>
-            <br>
-            <input href=" C:\Users\Makro\OneDrive\Documents" value="Choose File"> <br>
-            <input type="submit" value="Submit">
-        </form>
+            <form action="/action_page.php">
+                <p>Please select your favorite Web language:</p>
+                <input type="radio" id="document" name="upload_type" value="Document">
+                <label for="document">Document</label><br>
+                <input type="radio" id="image" name="upload_type" value="Image">
+                <label for="image">Image</label><br>
+                <input type="radio" id="javascript" name="upload_type" value="Video">
+                <label for="video">Video</label>
+                <br>
+                <input href=" C:\Users\Makro\OneDrive\Documents" type="file" value="Choose File"> <br>
+                <input type="submit" value="Submit">
+            </form>
 
         </div>
 

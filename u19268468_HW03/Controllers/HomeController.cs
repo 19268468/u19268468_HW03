@@ -11,16 +11,12 @@ namespace u19268468_HW03.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult About()
-        {
-            ViewBag.Message = "About Program";
+            ViewBag.Title = "Home Page";
 
             return View();
         }
+
+        
 
        
     }
