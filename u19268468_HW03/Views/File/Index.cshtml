@@ -1,6 +1,10 @@
 ﻿
+@using FileUploading.Models
+@model List<FileModel>
+
 @{
     ViewBag.Title = "File";
+
 }
 
 <h2>Documents Uploaded</h2>
@@ -10,35 +14,36 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-               
+
                 <th scope="col">File Name </th>
                 <th scope="col">DOWNLOAD OPTION</th>
                 <th scope="col">DELETE OPTION</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>
-                    <button type="button" class="btnDownload">DOWNLOAD</button>
-                </td> @*download button*@
-                
-                <td>
-                    <button type="button" class="btnDelete">DELETE</button>
-                </td> @*delete button*@
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td></td>
-                <td></td>
+            @foreach (FileModel file in Model)
+            {
+                <tr>
+                    @*
+                        Default >> @Html.DisplayFor(modelItem => file.FileName)
+                    *@
+
+                    <td>@file.FileName</td>
+                    <td>
+                        <button>
+                            @Html.ActionLink("Download", "DownloadFile",
+                             new { fileName = file.FileName })
+                        </button>
+                    </td>
+                    <td>
+                        <button>
+                            @Html.ActionLink("DELETE", "DeleteFile",
+                           new { fileName = file.FileName },
+                           new { onclick = "return confirm('Are you sure you wish to delete this?');" })
+                        </button>
+                    </td>
+                </tr>
+            }
             </tr>
         </tbody>
     </table>
